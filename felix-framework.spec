@@ -8,7 +8,7 @@
 
 Name:    %{project}-framework
 Version: 2.0.5
-Release: 5
+Release: 7
 Summary: Apache Felix Framework
 
 Group:   Development/Java
