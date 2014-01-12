@@ -1,4 +1,4 @@
-%_javapackages_macros
+%{?_javapackages_macros:%_javapackages_macros}
 %global bundle org.apache.felix.framework
 
 Name:           felix-framework
