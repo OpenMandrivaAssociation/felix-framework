@@ -2,31 +2,29 @@
 %global bundle org.apache.felix.framework
 
 Name:           felix-framework
-Version:        4.2.1
-Release:        4.1%{?dist}
+Version:        4.4.1
+Release:        1.1
 Summary:        Apache Felix Framework
-
+Group:          Development/Java
 License:        ASL 2.0
 URL:            http://felix.apache.org
 Source0:        http://www.apache.org/dist/felix/%{bundle}-%{version}-source-release.tar.gz
 
 BuildArch:      noarch
 
-BuildRequires: java-devel >= 1:1.6.0
-BuildRequires: jpackage-utils
 BuildRequires: felix-osgi-compendium
 BuildRequires: felix-osgi-core
+BuildRequires: felix-parent
 BuildRequires: maven-local
-BuildRequires: maven-surefire-provider-junit4
 BuildRequires: mockito
 
-Requires: java >= 1:1.6.0
+Requires: java-headless >= 1:1.6.0
 
 %description
 Apache Felix Framework Interfaces and Classes.
 
 %package javadoc
-
+Group:          Documentation
 Summary:        API documentation for %{name}
 
 %description javadoc
@@ -53,6 +51,24 @@ rm src/test/java/org/apache/felix/framework/ServiceRegistryTest.java
 %doc LICENSE NOTICE
 
 %changelog
+* Tue Oct 21 2014 Mat Booth <mat.booth@redhat.com> - 4.4.1-1
+- Update to upstream 4.4.1 release.
+
+* Tue Jun 10 2014 Alexander Kurtakov <akurtako@redhat.com> 4.4.0-1
+- Update to upstream 4.4.0 release.
+
+* Tue Jun 10 2014 Alexander Kurtakov <akurtako@redhat.com> 4.2.1-8
+- Add missing BR on felix-parent.
+
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 4.2.1-7
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
+* Mon May 26 2014 Mikolaj Izdebski <mizdebsk@redhat.com> - 4.2.1-6
+- Remove BuildRequires on maven-surefire-provider-junit4
+
+* Tue Mar 04 2014 Stanislav Ochotnicky <sochotnicky@redhat.com> - 4.2.1-5
+- Use Requires: java-headless rebuild (#1067528)
+
 * Mon Aug 05 2013 Mat Booth <fedora@matbooth.co.uk> - 4.2.1-4
 - Update for latest guidelines
 
