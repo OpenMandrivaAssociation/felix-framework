@@ -3,7 +3,7 @@
 
 Name:           felix-framework
 Version:        4.4.1
-Release:        1.1
+Release:        1.2
 Summary:        Apache Felix Framework
 Group:          Development/Java
 License:        ASL 2.0
