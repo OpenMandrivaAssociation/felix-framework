@@ -7,7 +7,7 @@ Release:        1.4
 Summary:        Apache Felix Framework
 Group:          Development/Java
 License:        ASL 2.0
-URL:            http://felix.apache.org
+URL:            https://felix.apache.org
 Source0:        http://www.apache.org/dist/felix/%{bundle}-%{version}-source-release.tar.gz
 
 BuildArch:      noarch
